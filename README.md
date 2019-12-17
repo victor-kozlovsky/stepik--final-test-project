@@ -1,0 +1,1 @@
+stepik -- pytest -- final project for an automated testing course using Selenium and Python
