@@ -20,7 +20,7 @@ def test_gest_can_add_product_to_basket(browser, link):
     price_product = page.get_product_price()
     page.add_product_to_basket()
     page.solve_quiz_and_get_code()
-    page.should_by_correct_product_added(name_product, price_product)
+    page.should_be_correct_product_added(name_product, price_product)
 
 
 def test_gest_should_be_btn_add_to_basket(browser):
@@ -36,3 +36,9 @@ def test_gest_should_be_btn_write_review(browser):
     page.open()
     page.should_be_btn_write_review()
 
+
+def test_gest_should_not_be_success_message(browser): 
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
+    page = ProductPage(browser, link)
+    page.open()
+    page.should_not_be_success_message()
