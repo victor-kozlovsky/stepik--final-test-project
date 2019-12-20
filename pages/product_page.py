@@ -27,6 +27,10 @@ class ProductPage(BasePage):
         assert self.is_element_present(
             *ProductPageLocators.BTN_WRITE_REVIEW), "Button write review is not presented"
 
-    def should_not_be_success_message(self):
+    def cant_see_success_message(self):
         assert self.is_not_element_present(
             *ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
+
+    def success_message_disappeared(self):
+        assert self.is_disappeared(
+            *ProductPageLocators.SUCCESS_MESSAGE), "Success message cant disappeared"

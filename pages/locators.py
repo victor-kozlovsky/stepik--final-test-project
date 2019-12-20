@@ -15,7 +15,7 @@ class ProductPageLocators():
     BTN_WRITE_REVIEW = (By.CSS_SELECTOR, "#write_review")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main>h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".price_color")
-    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".messages.alertinner")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
     MESSAGES_PRODUCT_NAME = (By.CSS_SELECTOR, ".alertinner>strong")
     MESSAGES_PRODUCT_PRICE = (By.CSS_SELECTOR, ".alertinner>p>strong")
     
