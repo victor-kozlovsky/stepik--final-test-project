@@ -16,8 +16,10 @@ class ProductPage(BasePage):
         return self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
 
     def should_be_correct_product_added(self, product, price):
-        assert ((product == self.browser.find_elements(*ProductPageLocators.MESSAGES_PRODUCT_NAME)[0].text) and (
-            price == self.browser.find_element(*ProductPageLocators.MESSAGES_PRODUCT_PRICE).text)), "Added product not correct"
+        assert ((product == self.browser.find_elements(
+            *ProductPageLocators.MESSAGES_PRODUCT_NAME)[0].text) and (
+            price == self.browser.find_element(*
+            ProductPageLocators.MESSAGES_PRODUCT_PRICE).text)), "Added product not correct"
 
     def should_be_btn_add_to_basket(self):
         assert self.is_element_present(
