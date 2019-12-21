@@ -57,7 +57,7 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
          marks=pytest.mark.xfail),
      "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
      "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
-def test_gest_can_add_product_to_basket(browser, link):
+def test_guest_can_add_product_to_basket(browser, link):
     page = ProductPage(browser, link)
     page.open()
     name_product = page.get_product_name()
@@ -102,7 +102,7 @@ def test_guest_cant_see_success_message(browser):
     page.cant_see_success_message()
 
 
-def test_gest_should_be_btn_add_to_basket(browser):
+def test_guest_should_be_btn_add_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
     page = ProductPage(browser, link)
     page.open()
